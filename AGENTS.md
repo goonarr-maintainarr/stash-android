@@ -93,4 +93,4 @@ export ANDROID_HOME=/Users/jeremy/Library/Android/sdk
      ```
 5. **Git Commit Hygiene**:
    - Use Conventional Commits (`feat:`, `fix:`, `test:`, `docs:`, `refactor:`).
-   - Maintain author identity: `Goonarr Maintainers <maintainers@goonarr.dev>`.
+   - Maintain author identity: `Goonarr Maintainers <goonarrstash@gmail.com>`.
