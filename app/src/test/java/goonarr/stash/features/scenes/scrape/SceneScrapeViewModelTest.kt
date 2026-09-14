@@ -38,6 +38,7 @@ class SceneScrapeViewModelTest {
     fun setup() {
         Dispatchers.setMain(testDispatcher)
         repository = mockk(relaxed = true)
+        coEvery { repository.fetchSceneFromApi(any()) } returns null
         viewModel = SceneScrapeViewModel(repository)
     }
 

@@ -212,8 +212,8 @@ class SceneScrapeViewModel @Inject constructor(
                 } ?: emptyList()
 
                 if (uiState.value.taggerConfig.tagOperation == goonarr.stash.core.model.scraper.TagOperation.ADD) {
-                    val existingIds = current.tags?.map { it.id }
-                    (existingIds?.plus(newTagIds))?.distinct()
+                    val existingIds = current.tags?.map { it.id } ?: emptyList()
+                    (existingIds + newTagIds).distinct()
                 } else {
                     newTagIds
                 }

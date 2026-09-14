@@ -4,6 +4,7 @@ import goonarr.stash.core.database.SettingsStore
 import goonarr.stash.core.model.GenerationOptions
 import goonarr.stash.core.model.ScanOptions
 import goonarr.stash.core.network.StashClient
+import goonarr.stash.core.network.stashdb.StashDBClient
 import goonarr.stash.core.services.StashSubscriptionService
 import io.mockk.coVerify
 import io.mockk.every
@@ -24,6 +25,7 @@ class SettingsViewModelTest {
 
     private val settingsStore = mockk<SettingsStore>(relaxed = true)
     private val client = mockk<StashClient>(relaxed = true)
+    private val stashDBClient = mockk<StashDBClient>(relaxed = true)
     private val subscriptionService = mockk<StashSubscriptionService>(relaxed = true)
     private lateinit var viewModel: SettingsViewModel
     private val testDispatcher = StandardTestDispatcher()
@@ -46,7 +48,7 @@ class SettingsViewModelTest {
     }
 
     private fun createViewModel(): SettingsViewModel {
-        return SettingsViewModel(settingsStore, client, subscriptionService)
+        return SettingsViewModel(settingsStore, client, stashDBClient, subscriptionService)
     }
 
     @Test

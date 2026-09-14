@@ -10,6 +10,7 @@ import goonarr.stash.repositories.StudioRepository
 import goonarr.stash.repositories.TagRepository
 import goonarr.stash.repositories.performers.PerformerRepository
 import goonarr.stash.repositories.scenes.SceneRepository
+import goonarr.stash.repositories.stashdb.StashDBRepository
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.every
@@ -42,6 +43,7 @@ class HomeViewModelTest {
     private val savedFilterRepository = mockk<SavedFilterRepository>(relaxed = true)
     private val settingsStore = mockk<SettingsStore>(relaxed = true)
     private val syncRepository = mockk<SyncRepository>(relaxed = true)
+    private val stashDBRepository = mockk<StashDBRepository>(relaxed = true)
     private lateinit var viewModel: HomeViewModel
     private val testDispatcher = StandardTestDispatcher()
 
@@ -71,7 +73,7 @@ class HomeViewModelTest {
         // Given
         viewModel = HomeViewModel(
             sceneRepository, performerRepository, studioRepository, tagRepository,
-            savedFilterRepository, settingsStore, syncRepository, testDispatcher
+            savedFilterRepository, settingsStore, syncRepository, stashDBRepository, testDispatcher
         )
 
         // Then
@@ -87,7 +89,7 @@ class HomeViewModelTest {
         // When
         viewModel = HomeViewModel(
             sceneRepository, performerRepository, studioRepository, tagRepository,
-            savedFilterRepository, settingsStore, syncRepository, testDispatcher
+            savedFilterRepository, settingsStore, syncRepository, stashDBRepository, testDispatcher
         )
 
         // Start collecting to activate the Eagerly flow
@@ -111,7 +113,7 @@ class HomeViewModelTest {
 
         viewModel = HomeViewModel(
             sceneRepository, performerRepository, studioRepository, tagRepository,
-            savedFilterRepository, settingsStore, syncRepository, testDispatcher
+            savedFilterRepository, settingsStore, syncRepository, stashDBRepository, testDispatcher
         )
         val collectJob = launch { viewModel.uiState.collect {} }
 
@@ -152,7 +154,7 @@ class HomeViewModelTest {
 
         viewModel = HomeViewModel(
             sceneRepository, performerRepository, studioRepository, tagRepository,
-            savedFilterRepository, settingsStore, syncRepository, testDispatcher
+            savedFilterRepository, settingsStore, syncRepository, stashDBRepository, testDispatcher
         )
         val collectJob = launch { viewModel.uiState.collect {} }
 
@@ -186,7 +188,7 @@ class HomeViewModelTest {
         // When
         viewModel = HomeViewModel(
             sceneRepository, performerRepository, studioRepository, tagRepository,
-            savedFilterRepository, settingsStore, syncRepository, testDispatcher
+            savedFilterRepository, settingsStore, syncRepository, stashDBRepository, testDispatcher
         )
         val collectJob = launch { viewModel.uiState.collect {} }
 
