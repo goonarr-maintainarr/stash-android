@@ -2,6 +2,8 @@
 
 A native Android client for [Stash](https://stashapp.cc/), built with Jetpack Compose, Material 3, and Kotlin Coroutines. Features deep integration with StashDB and Whisparr, providing a modern, smooth, and feature-rich interface for browsing, managing, and streaming media from your self-hosted Stash server.
 
+[![Android CI](https://github.com/goonarr-maintainarr/stash-android/actions/workflows/ci.yml/badge.svg)](https://github.com/goonarr-maintainarr/stash-android/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/goonarr-maintainarr/stash-android)](https://github.com/goonarr-maintainarr/stash-android/releases/latest)
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.1.20+-purple.svg)](https://kotlinlang.org)
 [![Android](https://img.shields.io/badge/Android-8.0+_(API_26+)-green.svg)](https://developer.android.com)
 [![Target SDK](https://img.shields.io/badge/Target_SDK-36-blue.svg)](https://developer.android.com)
