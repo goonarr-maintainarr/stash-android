@@ -40,7 +40,7 @@ kotlinxSerialization = "1.9.0"
 coil = "2.7.0"
 
 # ExoPlayer (Media3)
-media3 = "1.2.1"
+media3 = "1.11.1"
 
 # OkHttp
 okhttp = "5.3.2"
