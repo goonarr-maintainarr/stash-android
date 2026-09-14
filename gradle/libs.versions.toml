@@ -8,7 +8,7 @@ ksp = "2.1.20-1.0.31"
 
 # AndroidX Core
 androidxCore = "1.15.0"
-androidxAppcompat = "1.7.0"
+androidxAppcompat = "1.8.0"
 androidxActivity = "1.9.3"
 androidxLifecycle = "2.8.7"
 androidxPalette = "1.0.0"
