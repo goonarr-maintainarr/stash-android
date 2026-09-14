@@ -1,0 +1,62 @@
+# EditorConfig for ktlint
+# https://editorconfig.org/
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{kt,kts}]
+# ktlint specific rules
+ktlint_code_style = android_studio
+max_line_length = 140
+
+# Disable wildcard imports (forces explicit imports)
+ktlint_standard_no-wildcard-imports = enabled
+
+# Remove unused imports
+ktlint_standard_no-unused-imports = enabled
+
+# Trailing comma on call site (disabled for less noise)
+ktlint_standard_trailing-comma-on-call-site = disabled
+
+# Trailing comma on declaration site (disabled for less noise)
+ktlint_standard_trailing-comma-on-declaration-site = disabled
+
+# No consecutive blank lines
+ktlint_standard_no-consecutive-blank-lines = enabled
+
+# Consistent function signature formatting (disabled - conflicts with Compose)
+ktlint_standard_function-signature = disabled
+
+# Compose: Modifier should be first optional parameter
+ktlint_compose_modifier-order = enabled
+
+# Disable argument-list-wrapping (has known bugs with certain file formats)
+ktlint_standard_argument-list-wrapping = disabled
+
+# Disable function-naming (conflicts with Compose @Composable PascalCase convention)
+ktlint_standard_function-naming = disabled
+
+# Disable value-argument-comment (conflicts with inline comments for clarity)
+ktlint_standard_value-argument-comment = disabled
+
+# Disable property-naming (conflicts with GraphQL query naming conventions)
+ktlint_standard_property-naming = disabled
+
+# Disable value-parameter-comment (conflicts with inline parameter comments)
+ktlint_standard_value-parameter-comment = disabled
+
+# Disable comment-wrapping (allows inline comments)
+ktlint_standard_comment-wrapping = disabled
+
+[*.xml]
+indent_size = 4
+
+[*.md]
+trim_trailing_whitespace = false
