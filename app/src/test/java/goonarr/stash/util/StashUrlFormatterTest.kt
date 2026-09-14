@@ -23,14 +23,14 @@ class StashUrlFormatterTest {
     @Test
     fun `resolveUrl appends base url and api key to relative path`() = runTest {
         // Given
-        every { settingsStore.serverUrl } returns flowOf("http://192.168.1.100:9999")
+        every { settingsStore.serverUrl } returns flowOf("https://stash.example.com:9999")
         every { settingsStore.apiKey } returns flowOf("secret-key")
 
         // When
         val result = formatter.resolveUrl("/stream/123")
 
         // Then
-        assertEquals("http://192.168.1.100:9999/stream/123?apikey=secret-key", result)
+        assertEquals("https://stash.example.com:9999/stream/123?apikey=secret-key", result)
     }
 
     @Test
@@ -38,7 +38,7 @@ class StashUrlFormatterTest {
         // Given
         every {
             settingsStore.serverUrl
-        } returns flowOf("http://192.168.1.100:9999")
+        } returns flowOf("https://stash.example.com:9999")
         every { settingsStore.apiKey } returns flowOf("secret-key")
 
         // When

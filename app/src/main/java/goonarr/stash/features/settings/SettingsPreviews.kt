@@ -11,7 +11,7 @@ import goonarr.stash.util.MockData
 fun SettingsScreenPreview_AllCollapsed() {
     StashTheme {
         SettingsScreenContent(
-            serverUrl = "http://192.168.1.100:9999/graphql",
+            serverUrl = "https://stash.example.com/graphql",
             apiKey = "abc123",
             testSuccess = true,
             scanOptionsExpanded = false,
@@ -27,7 +27,7 @@ fun SettingsScreenPreview_AllCollapsed() {
 fun SettingsScreenPreview_ScanExpanded() {
     StashTheme {
         SettingsScreenContent(
-            serverUrl = "http://192.168.1.100:9999/graphql",
+            serverUrl = "https://stash.example.com/graphql",
             apiKey = "abc123",
             testSuccess = true,
             scanOptionsExpanded = true,
@@ -43,7 +43,7 @@ fun SettingsScreenPreview_ScanExpanded() {
 fun SettingsScreenPreview_GenerationExpanded() {
     StashTheme {
         SettingsScreenContent(
-            serverUrl = "http://192.168.1.100:9999/graphql",
+            serverUrl = "https://stash.example.com/graphql",
             apiKey = "abc123",
             testSuccess = true,
             scanOptionsExpanded = false,
@@ -59,7 +59,7 @@ fun SettingsScreenPreview_GenerationExpanded() {
 fun SettingsScreenPreview_AllExpanded() {
     StashTheme {
         SettingsScreenContent(
-            serverUrl = "http://192.168.1.100:9999/graphql",
+            serverUrl = "https://stash.example.com/graphql",
             apiKey = "abc123",
             scanOptionsExpanded = true,
             generationOptionsExpanded = true,
@@ -74,7 +74,7 @@ fun SettingsScreenPreview_AllExpanded() {
 fun SettingsScreenPreview_Testing() {
     StashTheme {
         SettingsScreenContent(
-            serverUrl = "http://192.168.1.100:9999/graphql",
+            serverUrl = "https://stash.example.com/graphql",
             apiKey = "secret-key",
             isTesting = true,
             jobs = listOf(MockData.scanningJob),

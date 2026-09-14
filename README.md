@@ -63,10 +63,10 @@ cd stash-android
 ### Server Configuration
 1. Launch the app on your Android device or emulator.
 2. Navigate to **Settings**.
-3. Enter your Stash server URL (e.g., `http://192.168.1.100:9999/graphql`).
+3. Enter your Stash server URL (e.g., `http://stash.local:9999/graphql` or `http://localhost:9999/graphql`).
 4. Enter your API key (generated in your Stash web UI under **Settings → Security**).
 5. Tap **Test Connection**.
-6. *(Optional)* Configure **Whisparr** (e.g., `http://192.168.1.100:8787`) and **StashDB** API keys.
+6. *(Optional)* Configure **Whisparr** (e.g., `http://whisparr.local:8787`) and **StashDB** API keys.
 
 ---
 
